@@ -2,11 +2,13 @@
 
 # 一、综述
 
-基于[fastapi-amis-admin](https://github.com/amisadmin/fastapi-amis-admin)和[fastapi-user-auth](https://github.com/amisadmin/fastapi_user_auth)的轻量级 数据增删改查可视化项目，适用于后端人员快速搭建前端框架。
+基于[fastapi-amis-admin](https://github.com/amisadmin/fastapi-amis-admin)和[fastapi-user-auth](https://github.com/amisadmin/fastapi_user_auth)的轻量级 数据增删改查可视化项目，适用于技术服务人员快速搭建前端框架。
 
-本demo用于网络安全行业域名的整理、定期扫描的管理维护。
+本demo用于**网络安全行业**域名的整理、定期扫描的管理维护。
 
 声明：数据结构保留，项目数据已删除，仅做demo展示，使用时请自行定义数据结构。
+
+**警告：该项目基于任务脚本开发，定制化程度较高，无法直接运行，仅做参考**。
 
 
 
@@ -65,7 +67,11 @@ sync_engine_url='sqlite+aiosqlite:///amisadmin.db'
 
 
 
-3、运行代码（若第一次报错，再次运行即可），初始化数据库表后导入基础数据即可。（文件数据库只能新建数据）
+3、运行代码（若第一次报错，再次运行即可），初始化数据库表后导入基础数据即可。（文件数据库只能新建数据，但是无法填充version表，需要去除相关自定义代码）
+
+```
+需要在version表中填入初始化数据，否则相关页面无法显示。如2025010110，str类型。
+```
 
 
 
@@ -79,6 +85,8 @@ sync_engine_url='sqlite+aiosqlite:///amisadmin.db'
 管理员及超级管理员账号均重新建立并赋权；然后禁用默认admin、root账号！
 由于登录处未做验证码以及字段加密，所以登录处可爆破！一定要禁用默认账号！
 白名单策略也是进一步保障作用，不建议取消
+
+有兴趣可自行添加验证码机制。
 ```
 
 
@@ -91,3 +99,40 @@ sync_engine_url='sqlite+aiosqlite:///amisadmin.db'
 固定字段在model模型中。enum字段模型需要前后命名保持一致，中文、英文，不支持特殊字符。
 ```
 
+
+
+# 四、可视化效果展示
+
+1、登录界面
+
+![image-20250318143149778](./README.assets/image-20250318143149778.png)
+
+
+
+2、支持多角色，需要赋权相应页面及数据权限
+
+![image-20250318143430021](./README.assets/image-20250318143430021.png)
+
+
+
+3、用户管理
+
+![image-20250318143552677](./README.assets/image-20250318143552677.png)
+
+
+
+4、域名底表维护
+
+![image-20250318144021604](./README.assets/image-20250318144021604.png)
+
+
+
+5、底表扫描信息（需要脚本支撑）
+
+![image-20250318144240499](./README.assets/image-20250318144240499.png)
+
+
+
+6、资产全量扫描信息（需要脚本支撑）
+
+![image-20250318144421915](./README.assets/image-20250318144421915.png)
