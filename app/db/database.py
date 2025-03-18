@@ -4,10 +4,10 @@ from sqlalchemy.orm import sessionmaker
 
 '''数据库连接配置'''
 # 异步连接URL
-sync_database_url = 'mysql+aiomysql://root:Mysql000..@localhost/WebAMS'
+sync_database_url = 'mysql+aiomysql://root:pass@localhost/WebAMS'
 # sync_database_url='sqlite+aiosqlite:///amisadmin.db'
 # 同步连接URL
-database_url = 'mysql+pymysql://root:Mysql000..@localhost/WebAMS'
+database_url = 'mysql+pymysql://root:pass@localhost/WebAMS'
 # database_url='sqlite:///amisadmin.db'
 
 # 创建异步引擎对象
