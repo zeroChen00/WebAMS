@@ -1,0 +1,7 @@
+{
+  "branch": "master",
+  "SHA1": "18371573c",
+  "message": "fix: SDK模式下，select使用自定义过滤，采用移动模式，下拉点不开 (#9905)",
+  "author": "lmaomaoz",
+  "date": "2024-03-29 15:46:30"
+}
