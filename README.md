@@ -101,7 +101,19 @@ sync_engine_url='sqlite+aiosqlite:///amisadmin.db'
 
 
 
-# 四、可视化效果展示
+6、demo代码运行（使用sqlite数据库，部分页面已赋权，可直接使用admin账号登录）
+
+```
+python run.py
+访问：
+http://127.0.0.1:8080/demo
+账号：
+admin:admin root/root
+```
+
+
+
+# 四、实例化效果展示
 
 1、登录界面
 

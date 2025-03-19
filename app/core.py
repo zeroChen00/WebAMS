@@ -8,7 +8,7 @@ from starlette.middleware.base import RequestResponseEndpoint
 # 实例化site
 site = MyAuthAdminSite(settings=Settings(
     database_url_async = sync_database_url,
-    site_path = '/WebAMS',
+    site_path = '/demo',
     site_title ='Web资产管理系统',
     site_icon ='/static/site_ico/favicon.png',
     language = 'Python',
